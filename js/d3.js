@@ -45,7 +45,7 @@ d3.select("body")
 
 
 var circle =  d3.selectAll("circle")
-circle.data(myData)
+                .data(myData)
 circle.exit().remove()
 circle.transition()
     .duration(750)
@@ -68,7 +68,14 @@ circle.transition()
         return "hsl(" + Math.random() * 360 + "," + Math.random() *100 + "%," + Math.random() *100+"%)";
     })
 
-
+var newData = [6,10,14]
+circle =  d3.selectAll("circle")
+            .data(newData)
+circle.exit()
+    .transition()
+    .duration(2000)
+    .attr("r", 0)
+    .remove();
 data = [30, 86, 168, 281, 303, 365];
 
 d3.select(".chart")

@@ -66,7 +66,7 @@ bar.append("text")
 
 // Histogram style
 data = [4, 8, 15, 16, 23, 42, 30, 8, 20, 50, 9, 30, 40];
-width = 960;
+width = 500;
 height = 500;
 
 var y = d3.scaleLinear()
@@ -93,7 +93,7 @@ bar.append("rect")
     .attr("width", barWidth - 1);
 
 bar.append("text")
-    .attr("x", barWidth / 2)
-    .attr("y", function(d) { return y(d) + 3; })
+    .attr("x", barWidth / 2 + 4)
+    .attr("y", function(d) { return y(d) + 4; })
     .attr("dy", ".75em")
     .text(function(d) { return d; });
